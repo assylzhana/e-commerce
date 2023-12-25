@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Dashboard from './pages/Dashboard.vue'
 import Review from './pages/Review.vue'
+import NewProduct from './pages/NewProduct.vue'
 
 const routerHistory = createWebHistory()
 
@@ -14,6 +15,10 @@ const router = createRouter({
     {
       path: '/review',
       component: Review
+    },
+    {
+      path: '/new-product',
+      component: NewProduct
     },
   ]
 })
