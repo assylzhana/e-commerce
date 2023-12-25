@@ -31,7 +31,6 @@
           <Notifications align="right" />
           <Help align="right" />
           <ThemeToggle />
-          <!-- Divider -->
           <hr class="w-px h-6 bg-slate-200 dark:bg-slate-700 border-none" />
           <UserMenu align="right" />
         </div>
