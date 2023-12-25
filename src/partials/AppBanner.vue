@@ -1,6 +1,7 @@
 <template>
-  <div class="relative bg-white dark:bg-white p-4 sm:p-6 rounded-sm overflow-hidden mb-8">
 
+    <div class="relative bg-white dark:bg-white p-4 sm:p-6 rounded-sm overflow-hidden mb-8">
+    
     <div class="absolute right-0 top-0 -mt-4 mr-16 pointer-events-none hidden xl:block" aria-hidden="true">
       <svg width="319" height="198" xmlns:xlink="http://www.w3.org/1999/xlink">
         <defs>
@@ -41,22 +42,23 @@
         </g>
       </svg>
     </div>
-
-    <div class="relative">
-      <h1 class="text-2xl md:text-3xl text-black dark:text-black font-bold mb-1">{{ title }}</h1>
-    </div>
-
-  </div>
-</template>
-
-<script>
-export default {
-  name: 'WelcomeBanner',
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-  },
-}
-</script>
+       <div class="relative">
+          <h1 class="text-2xl md:text-3xl text-black dark:text-black font-bold mb-1">Connected Apps</h1>
+        </div>    
+      </div>
+    </template>
+    
+    <script>
+    import { ref } from 'vue';
+    
+    export default {
+      name: 'Banner',
+      props: ['open'],
+      setup() {
+        const open = ref(true)
+        return {
+          open,
+        }    
+      }  
+    }
+    </script>

@@ -10,7 +10,7 @@
         <main>
           <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
   
-            <Baner />
+            <WelcomeBanner :title="dynamicTitle" />
             
             <div class="sm:flex sm:justify-between sm:items-center mb-8">
   
@@ -69,9 +69,12 @@ import WelcomeBanner from '../partials/dashboard/WelcomeBanner.vue'
     setup() {
   
       const sidebarOpen = ref(false)
+      const dynamicTitle = 'Product Editor'; 
+
   
       return {
         sidebarOpen,
+        dynamicTitle
       }  
     }
   }

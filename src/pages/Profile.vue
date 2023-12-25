@@ -18,17 +18,13 @@
   
   
             </div>
-            <Card></Card>
-            <br>
-            <div class="grid grid-cols-12 gap-6">
-                <DashboardCard10 />    
-            </div>
+  
   
   
           </div>
         </main>
   
-        <Footer></Footer >
+        <Footer></Footer>
   
       </div> 
   
@@ -37,44 +33,51 @@
   
   <script>
   import { ref } from 'vue'
-
+import Datepicker from '../components/Datepicker.vue'
 import FilterButton from '../components/DropdownFilter.vue'
 import Footer from '../components/Footer.vue'
 import Banner from '../partials/Banner.vue'
-import Card from '../partials/Card.vue'
 import Header from '../partials/Header.vue'
 import Sidebar from '../partials/Sidebar.vue'
-import DashboardCard10 from '../partials/dashboard/DashboardCard10.vue'
-import DashboardCard11 from '../partials/dashboard/DashboardCard11.vue'
-import DashboardCard12 from '../partials/dashboard/DashboardCard12.vue'
-import DashboardCard13 from '../partials/dashboard/DashboardCard13.vue'
+import DashboardAvatars from '../partials/dashboard/DashboardAvatars.vue'
+import DashboardCard01 from '../partials/dashboard/DashboardCard01.vue'
+import DashboardCard02 from '../partials/dashboard/DashboardCard02.vue'
+import DashboardCard03 from '../partials/dashboard/DashboardCard03.vue'
+import DashboardCard04 from '../partials/dashboard/DashboardCard04.vue'
+import DashboardCard05 from '../partials/dashboard/DashboardCard05.vue'
+import DashboardCard06 from '../partials/dashboard/DashboardCard06.vue'
+import DashboardCard07 from '../partials/dashboard/DashboardCard07.vue'
+import DashboardCard08 from '../partials/dashboard/DashboardCard08.vue'
 import WelcomeBanner from '../partials/dashboard/WelcomeBanner.vue'
   
   export default {
-    name: 'Review',
+    name: 'Dashboard',
     components: {
       Sidebar,
       Header,
       WelcomeBanner,
+      DashboardAvatars,
       FilterButton,
-      DashboardCard10,
-      DashboardCard11,
-      DashboardCard12,
-      DashboardCard13,
+      Datepicker,
+      DashboardCard01,
+      DashboardCard02,
+      DashboardCard03,
+      DashboardCard04,
+      DashboardCard05,
+      DashboardCard06,
+      DashboardCard07,
+      DashboardCard08,
       Banner,
       Footer,
-      Card
     },
     setup() {
-  
-      const sidebarOpen = ref(false)
-      const dynamicTitle = 'Review'; 
-
+      const sidebarOpen = ref(false);
+      const dynamicTitle = 'Settings'; 
   
       return {
         sidebarOpen,
-        dynamicTitle
-      }  
-    }
-  }
+        dynamicTitle,
+      };
+    },
+  };
   </script>

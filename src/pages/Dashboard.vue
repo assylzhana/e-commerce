@@ -10,7 +10,7 @@
       <main>
         <div class="px-4 sm:px-6 lg:px-8 py-8 w-full max-w-9xl mx-auto">
 
-          <WelcomeBanner />
+          <WelcomeBanner :title="dynamicTitle" />
           
           <div class="sm:flex sm:justify-between sm:items-center mb-8">
 
@@ -108,12 +108,13 @@ export default {
     Footer,
   },
   setup() {
-
-    const sidebarOpen = ref(false)
+    const sidebarOpen = ref(false);
+    const dynamicTitle = 'Revenue By Period'; 
 
     return {
       sidebarOpen,
-    }  
-  }
-}
+      dynamicTitle,
+    };
+  },
+};
 </script>
